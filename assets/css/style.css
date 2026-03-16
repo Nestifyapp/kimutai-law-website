@@ -9985,10 +9985,14 @@ textarea.form-control {
 
 
 .service-card {
-  border: 1px solid rgba(180, 156, 115, 0.35);
+  border: 1px solid #d7d7d7;
+  border-radius: 6px;
+  background: #fff;
+  padding: 22px 18px 24px;
   transition: all .3s ease;
 }
 .service-card:hover {
   border-color: #b49c73;
   box-shadow: 0 8px 22px rgba(0,0,0,.08);
+  transform: translateY(-2px);
 }
