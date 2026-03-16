@@ -9982,3 +9982,13 @@ textarea.form-control {
 .joinus-form .form-control {
   border: 1px solid #c7c7c7 !important;
 }
+
+
+.service-card {
+  border: 1px solid rgba(180, 156, 115, 0.35);
+  transition: all .3s ease;
+}
+.service-card:hover {
+  border-color: #b49c73;
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+}

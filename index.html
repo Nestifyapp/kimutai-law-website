@@ -162,7 +162,7 @@
 			  					</div>
 			  					<div class="text pl-2">
 			  						<h2>Proven Track Record</h2>
-			  						<p>Decades of successful legal outcomes for businesses and individuals.</p>
+			  						<p>Consistent results delivered through disciplined preparation and strong courtroom and advisory practice.</p>
 			  					</div>
 			  				</div>
 		        	</div>
@@ -173,7 +173,7 @@
 			  					</div>
 			  					<div class="text pl-2">
 			  						<h2>Client-Centric Service</h2>
-			  						<p>Decades of successful legal outcomes for businesses and individuals.</p>
+			  						<p>We prioritize responsiveness, plain-language communication, and legal solutions aligned to each client's goals.</p>
 			  					</div>
 			  				</div>
 		        	</div>
@@ -184,7 +184,7 @@
 			  					</div>
 			  					<div class="text pl-2">
 			  						<h2>Strategic Insights</h2>
-			  						<p>Decades of successful legal outcomes for businesses and individuals.</p>
+			  						<p>Our team anticipates legal risk early and structures strategies that protect both growth and reputation.</p>
 			  					</div>
 			  				</div>
 		        	</div>
@@ -195,7 +195,7 @@
 			  					</div>
 			  					<div class="text pl-2">
 			  						<h2>Personalized Approach</h2>
-			  						<p>Decades of successful legal outcomes for businesses and individuals.</p>
+			  						<p>Every engagement is tailored to your context, timeline, and the practical outcomes you need.</p>
 			  					</div>
 			  				</div>
 		        	</div>
@@ -260,7 +260,7 @@
         </div>
   		<div class="row">
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=corporate">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-stats"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -272,7 +272,7 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=family">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-family"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -284,7 +284,7 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=ip">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-handcuffs"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -296,7 +296,7 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=realestate">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-stay-home"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -308,26 +308,26 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=employment">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-injury"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
 	  						<span class="flaticon-injury"></span>
 	  					</div>
   					</div>
-  					<h2>Personal Injury</h2>
+  					<h2><a href="practice-area-detail.html?area=employment">Employment &amp; Labor Law</a></h2>
 						<p>Guidance on workplace rights, employment contracts, and employer-employee disputes.</p>
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=tax">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-auction"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
 	  						<span class="flaticon-auction"></span>
 	  					</div>
   					</div>
-  					<h2>Judicial Law</h2>
+  					<h2><a href="practice-area-detail.html?area=tax">Tax Law</a></h2>
 						<p>Advisory services in tax planning, compliance, and resolution of tax disputes.</p>
   				</div>
   			</div>
@@ -829,6 +829,16 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="assets/js/google-map.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('.service-card[data-href]').forEach(function(card){
+      card.style.cursor='pointer';
+      card.addEventListener('click', function(e){
+        if(e.target.closest('a')) return;
+        window.location.href = card.getAttribute('data-href');
+      });
+    });
+  </script>
 
   </body>
 </html>

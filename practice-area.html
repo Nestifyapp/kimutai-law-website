@@ -88,7 +88,7 @@
         </div>
   		<div class="row">
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=corporate">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-stats"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -100,7 +100,7 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=family">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-family"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -112,7 +112,7 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=ip">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-handcuffs"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -124,7 +124,7 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=realestate">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-stay-home"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -136,7 +136,7 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=employment">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-injury"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -148,7 +148,7 @@
   				</div>
   			</div>
   			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-  				<div class="services-2 text-center">
+  				<div class="services-2 text-center service-card" data-href="practice-area-detail.html?area=tax">
   					<div class="icon-wrap">
   						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-auction"></span></div>
 	  					<div class="icon d-flex align-items-center justify-content-center">
@@ -352,6 +352,16 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="assets/js/google-map.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('.service-card[data-href]').forEach(function(card){
+      card.style.cursor='pointer';
+      card.addEventListener('click', function(e){
+        if(e.target.closest('a')) return;
+        window.location.href = card.getAttribute('data-href');
+      });
+    });
+  </script>
 
   </body>
 </html>
