@@ -44,7 +44,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h2 class="mb-3" id="areaHeading">Corporate &amp; Commercial Law (Business Law)</h2>
+          <h2 class="mb-3" id="areaHeading">Corporate &amp; Commercial Law</h2>
           <p id="areaIntro">We help businesses with incorporation, contracts, governance, mergers, compliance and risk management. Our approach is practical, commercially focused, and built for growth-stage and established enterprises.</p>
           <p id="areaDetail">From negotiation to documentation and regulatory advisory, our team delivers clear legal strategies that protect your operations and unlock opportunities.</p>
           <p><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#requestServiceModal">Request This Service</a></p>
@@ -70,8 +70,8 @@
       <div class="owl-carousel related-case-carousel">
         <div class="item"><div class="blog-entry"><a class="block-20" style="background-image:url('assets/images/case-1.jpg');"></a><div class="text p-3"><span class="case-tag">Corporate &amp; Commercial Law</span><h3 class="heading">SME Contract Risk Reduction</h3><p>Advised a Nairobi SME on stronger commercial contract terms and payment protections.</p></div></div></div>
         <div class="item"><div class="blog-entry"><a class="block-20" style="background-image:url('assets/images/case-3.jpg');"></a><div class="text p-3"><span class="case-tag">Intellectual Property</span><h3 class="heading">Startup Trademark Protection</h3><p>Secured trademark rights and licensing structure for a scaling digital health startup.</p></div></div></div>
-        <div class="item"><div class="blog-entry"><a class="block-20" style="background-image:url('assets/images/case-2.jpg');"></a><div class="text p-3"><span class="case-tag">Real Estate Law</span><h3 class="heading">Boundary Dispute Resolution</h3><p>Represented client in a land dispute and achieved court-backed boundary clarification.</p></div></div></div>
-        <div class="item"><div class="blog-entry"><a class="block-20" style="background-image:url('assets/images/case-7.jpg');"></a><div class="text p-3"><span class="case-tag">Employment &amp; Labor Law</span><h3 class="heading">Workplace Policy Compliance</h3><p>Implemented policy reforms that reduced workplace conflicts and improved compliance.</p></div></div></div>
+        <div class="item"><div class="blog-entry"><a class="block-20" style="background-image:url('assets/images/case-2.jpg');"></a><div class="text p-3"><span class="case-tag">Conveyancing &amp; Real Estate</span><h3 class="heading">Boundary Dispute Resolution</h3><p>Represented client in a land dispute and achieved court-backed boundary clarification.</p></div></div></div>
+        <div class="item"><div class="blog-entry"><a class="block-20" style="background-image:url('assets/images/case-7.jpg');"></a><div class="text p-3"><span class="case-tag">Fintech &amp; Cyber Law</span><h3 class="heading">Cyber Compliance & Incident Response</h3><p>Guided a digital business through incident response, regulator engagement, and stronger cyber controls.</p></div></div></div>
       </div>
     </div>
   </section>
@@ -89,13 +89,17 @@
             <div class="form-group"><label>Email Address</label><input class="form-control" type="email"></div>
             <div class="form-group"><label>Phone Number</label><input class="form-control" type="text"></div>
             <div class="form-group"><label>Practice Area</label>
-              <select class="form-control" id="serviceAreaSelect">
+                            <select class="form-control" id="serviceAreaSelect">
+                <option>Conveyancing &amp; Real Estate</option>
                 <option>Corporate &amp; Commercial Law</option>
-                <option>Family Law</option>
-                <option>Intellectual Property</option>
-                <option>Real Estate Law</option>
-                <option>Employment &amp; Labor Law</option>
+                <option>Arbitration &amp; Dispute Resolution</option>
                 <option>Tax Law</option>
+                <option>Infrastructure, Projects &amp; PPP</option>
+                <option>Fintech &amp; Cyber Law</option>
+                <option>Immigration Law</option>
+                <option>Intellectual Property Law</option>
+                <option>Entertainment &amp; Sports Law</option>
+                <option>Environmental Law</option>
               </select>
             </div>
             <div class="form-group"><label>Describe Your Request</label><textarea class="form-control" rows="4"></textarea></div>
@@ -114,13 +118,17 @@
   <script src="assets/js/main.js"></script>
   <script>
     $('.related-case-carousel').owlCarousel({loop:true,margin:20,autoplay:true,responsive:{0:{items:1},768:{items:2},1200:{items:3}}});
-    const details={
-      corporate:{title:'Corporate & Commercial Law (Business Law)',intro:'We advise businesses on incorporation, contracts, governance and transactions with practical legal support tailored to growth.',detail:'Our team structures deals, protects commercial interests, and helps clients stay compliant in changing regulatory environments.',sel:'Corporate & Commercial Law'},
-      family:{title:'Family Law',intro:'We support clients through divorce, custody, maintenance, and succession planning with clarity and empathy.',detail:'We focus on workable agreements, protection of rights, and outcomes that support long-term family stability.',sel:'Family Law'},
-      ip:{title:'Intellectual Property',intro:'We help innovators secure and enforce trademarks, copyrights, and related intellectual property rights.',detail:'Our services include registration strategy, infringement response, and licensing support for growth-stage businesses.',sel:'Intellectual Property'},
-      realestate:{title:'Real Estate Law',intro:'We support buyers, sellers, developers, and investors with due diligence and transaction documentation.',detail:'Our conveyancing approach reduces legal risk and ensures compliant, secure property transfers.',sel:'Real Estate Law'},
-      employment:{title:'Employment & Labor Law',intro:'We advise employers and employees on contracts, disciplinary procedures, and workplace disputes.',detail:'We help organizations build compliant HR systems and reduce legal exposure in labor matters.',sel:'Employment & Labor Law'},
-      tax:{title:'Tax Law',intro:'We provide legal support on tax compliance, dispute management, and risk controls for businesses.',detail:'Our team helps clients improve audit readiness while protecting business continuity.',sel:'Tax Law'}
+        const details={
+      conveyancing:{title:'Conveyancing & Real Estate',intro:'We handle drawing and negotiating property contracts and transfers, and drafting, executing, and lodging leases, easements, and licenses.',detail:'Our team draws charges, mortgages, and reconveyances, obtains land transaction consents, undertakes due diligence, and assists in probate/succession.',sel:'Conveyancing & Real Estate'},
+      corporate:{title:'Corporate & Commercial Law',intro:'Our corporate and commercial practice incorporates banking law, bankruptcy, and insolvency support for businesses.',detail:'We advise on transactions, governance, finance documentation, and regulatory risk in complex commercial operations.',sel:'Corporate & Commercial Law'},
+      arbitration:{title:'Arbitration & Dispute Resolution',intro:'We represent clients in arbitration and alternative dispute resolution processes across commercial and civil disputes.',detail:'Our dispute team develops strategy from pre-dispute risk analysis through negotiated settlements and enforceable outcomes.',sel:'Arbitration & Dispute Resolution'},
+      tax:{title:'Tax Law',intro:'We provide legal guidance on tax structuring, compliance, and controversy management for businesses and investors.',detail:'Our support covers audits, investigations, tax dispute resolution, and advisory on evolving tax obligations.',sel:'Tax Law'},
+      infrastructure:{title:'Infrastructure, Projects & PPP',intro:'We support project structuring, drafting Power Purchase Agreements (PPAs), and tender documentation.',detail:'This practice integrates Energy, Oil, and Gas law to support financing, procurement, and project delivery lifecycle risks.',sel:'Infrastructure, Projects & PPP'},
+      fintech:{title:'Fintech & Cyber Law',intro:'Our team provides fintech regulatory services, cryptocurrency advisory, and NDA structuring for digital businesses.',detail:'We also support response strategy and prosecution pathways in cyber crime matters.',sel:'Fintech & Cyber Law'},
+      immigration:{title:'Immigration Law',intro:'We assist clients with residence permits, visas, and work permits for employment and business mobility.',detail:'Our immigration practice also advises on investment incentives available to foreigners entering the Kenyan market.',sel:'Immigration Law'},
+      ip:{title:'Intellectual Property Law',intro:'We advise on trademarks, patenting, copyrights, advertising compliance, and franchise law matters.',detail:'Our IP services protect innovation portfolios and support commercialization through licensing and enforcement.',sel:'Intellectual Property Law'},
+      entertainment:{title:'Entertainment & Sports Law',intro:'We advise creatives, athletes, and rights holders on contracts, sponsorships, image rights, and distribution arrangements.',detail:'Our team also handles disputes involving talent management, event obligations, and sports governance.',sel:'Entertainment & Sports Law'},
+      environmental:{title:'Environmental Law',intro:'We advise on carbon trading, PPA reviews, Environmental Impact Assessments (EIA), and environmental audits.',detail:'Our practice supports renewable energy compliance and environmental risk controls across regulated projects.',sel:'Environmental Law'}
     };
     const q=new URLSearchParams(window.location.search).get('area');
     if(q && details[q]){
