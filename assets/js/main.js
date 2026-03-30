@@ -224,3 +224,20 @@
 
 })(jQuery);
 
+
+
+(function() {
+  var whatsappNumber = '254721414500';
+  if (document.querySelector('.whatsapp-float-btn')) return;
+
+  var link = document.createElement('a');
+  link.className = 'whatsapp-float-btn';
+  link.href = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent('Hello DKimutai, I would like legal assistance.');
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', 'WhatsApp chat with DKimutai');
+  link.setAttribute('title', 'WhatsApp call/text DKimutai');
+  link.innerHTML = '<span class="fa fa-whatsapp" aria-hidden="true"></span>';
+
+  document.body.appendChild(link);
+})();
