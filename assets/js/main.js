@@ -59,6 +59,28 @@
 	};
 	carousel();
 
+	var clientCarousel = function() {
+		if ($('.trusted-clients-carousel').length) {
+			$('.trusted-clients-carousel').owlCarousel({
+				loop: true,
+				margin: 20,
+				autoplay: true,
+				autoplayTimeout: 2200,
+				smartSpeed: 700,
+				autoplayHoverPause: true,
+				dots: false,
+				nav: false,
+				responsive: {
+					0: { items: 1 },
+					576: { items: 2 },
+					992: { items: 3 },
+					1200: { items: 4 }
+				}
+			});
+		}
+	};
+	clientCarousel();
+
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
 		// 	 timer;
