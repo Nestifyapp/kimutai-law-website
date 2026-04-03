@@ -59,6 +59,28 @@
 	};
 	carousel();
 
+	var clientCarousel = function() {
+		if ($('.trusted-clients-carousel').length) {
+			$('.trusted-clients-carousel').owlCarousel({
+				loop: true,
+				margin: 20,
+				autoplay: true,
+				autoplayTimeout: 2200,
+				smartSpeed: 700,
+				autoplayHoverPause: true,
+				dots: false,
+				nav: false,
+				responsive: {
+					0: { items: 1 },
+					576: { items: 2 },
+					992: { items: 3 },
+					1200: { items: 4 }
+				}
+			});
+		}
+	};
+	clientCarousel();
+
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
 		// 	 timer;
@@ -224,3 +246,20 @@
 
 })(jQuery);
 
+
+
+(function() {
+  var whatsappNumber = '254721414500';
+  if (document.querySelector('.whatsapp-float-btn')) return;
+
+  var link = document.createElement('a');
+  link.className = 'whatsapp-float-btn';
+  link.href = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent('Hello DKimutai, I would like legal assistance.');
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', 'WhatsApp chat with DKimutai');
+  link.setAttribute('title', 'WhatsApp call/text DKimutai');
+  link.innerHTML = '<span class="fa fa-whatsapp" aria-hidden="true"></span>';
+
+  document.body.appendChild(link);
+})();
